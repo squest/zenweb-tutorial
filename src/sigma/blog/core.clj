@@ -10,3 +10,8 @@
   []
   (apply str (page/tmp-home :tutorial)))
 
+(def cdb (db/make-couch "config.edn" :cloudant-development))
+
+(defn post-tutorial
+  [data]
+  (db/add-article! cdb data))

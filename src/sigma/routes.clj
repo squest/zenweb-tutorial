@@ -7,3 +7,8 @@
        (blog/home-page))
   (GET "/tutorial" req
        (blog/tutorial-page )))
+
+(defroutes tutorial
+  (context "/tutorial" req
+           (GET "/" req
+                "Do nothing!!!")))

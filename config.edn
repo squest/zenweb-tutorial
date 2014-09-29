@@ -1,0 +1,8 @@
+{:couch-local "zencode"
+ :couch-test "zencoding-test"
+ :cloudant-development {:url "https://zenius.cloudant.com/"
+                        :dbname "zencode"
+                        :username "dodol"
+                        :password "dodolipet"}
+ :quest-development "questdb-development"
+ :quest-production "questdb-production"}

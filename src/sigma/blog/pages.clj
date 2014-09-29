@@ -5,15 +5,7 @@
 
 (declare page-list ct-home ct-tutorial)
 
-(deftemplate tmp-home (str dir "base.html")
-  [whichpage]
-  [:title] (content "Just in time")  
-  [:#headline] (content "Some shit!!")
-  [:#body] (content (get page-list whichpage)))
 
-(def page-list
-  {:home (ct-home)
-   :tutorial (ct-tutorial)})
 
 ;; Implementation details
 
@@ -31,3 +23,12 @@
          [:h3 "Another headline"]
          [:p "Some more lorems stuffs"]]))
 
+(deftemplate tmp-home (str dir "base.html")
+  [whichpage]
+  [:title] (content "Just in time")  
+  [:#headline] (content "Some shit!!")
+  [:#body] (content (get page-list whichpage)))
+
+(def page-list
+  {:home (ct-home)
+   :tutorial (ct-tutorial)})
